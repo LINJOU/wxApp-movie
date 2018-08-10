@@ -1,0 +1,5 @@
+<!-- 骨架屏 -->
+<scroll-view class="skeleton" scroll-y enable-back-to-top="true">
+  <view wx:key="{{index}}" wx:for="{{skeletonRectLists}}" style="width: {{item.width}}px; height: {{item.height}}px; background-color: #cccccc; position: absolute; left: {{item.left}}px; top: {{item.top}}px"></view>
+  <view wx:key="{{index}}" wx:for="{{skeletonCircleLists}}" style="width: {{item.width}}px; height: {{item.height}}px; border-radius: {{item.width}}px; background-color: #808080; position: absolute; left: {{item.left}}px; top: {{item.top}}px"></view>
+</scroll-view>

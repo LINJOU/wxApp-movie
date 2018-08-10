@@ -1,0 +1,20 @@
+<view class="interests-page">
+  <view class="interests-page-title">全部短评
+    <text class="interests-page-total" wx:if="{{interests.length > 0}}">({{interestsTotal}})</text>
+  </view>
+  <view class="interests-page-switches">
+    <switches switches="{{switchesName}}" bindgetIndex="selectIndex"></switches>
+  </view>
+  <view class="interests-page-list">
+    <view class="hotlist" hidden="{{currentIndex !== 0}}">
+      <scroll-view scroll-y class="interests-scroll" scroll-y enable-back-to-top="true" bindscrolltolower="getMoreHotInterests">
+        <interests interestsList="{{hotInterests}}" loadingShow="{{hothasMore && hotlowerLoadingShow}}"></interests>
+      </scroll-view>
+    </view>
+    <view class="latestlist" hidden="{{currentIndex !== 1}}">
+      <scroll-view scroll-y class="interests-scroll" scroll-y enable-back-to-top="true" bindscrolltolower="getMoreLatestInterests">
+        <interests interestsList="{{latestInterests}}" loadingShow="{{latesthasMore && latestlowerLoadingShow}}"></interests>
+      </scroll-view>
+    </view>
+  </view>
+</view>

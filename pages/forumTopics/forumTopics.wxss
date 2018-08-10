@@ -1,0 +1,28 @@
+.forumTopics-page {
+  width: 750rpx;
+  height: 100vh;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+}
+
+.forumTopics-page-title {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #808080;
+  font-size: 40rpx;
+  color: #05B512;
+  box-sizing: border-box;
+}
+
+.forumTopics-page-total {
+  padding-left: 12rpx;
+  font-size: 32rpx;
+  color: #808080;
+}
+
+.forumTopics-page-list {
+  width: 100%;
+  height: calc(100% - 80rpx);
+  overflow: hidden;
+}

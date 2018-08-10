@@ -1,0 +1,5 @@
+<view class="switches">
+  <view data-switch-index="{{index}}" wx:for="{{switches}}" wx:key="name" bindtap="selectIndex" class="switch-item">
+    <text class="text {{currentIndex===index?'active':''}}">{{item.name}}</text>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+.interests-page {
+  width: 750rpx;
+  height: 100vh;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+}
+
+.interests-page-title {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #808080;
+  font-size: 40rpx;
+  color: #05B512;
+  box-sizing: border-box;
+}
+
+.interests-page-total {
+  padding-left: 12rpx;
+  font-size: 32rpx;
+  color: #808080;
+}
+
+.interests-page-switches {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.interests-page-list {
+  width: 100%;
+  height: calc(100% - 160rpx);
+  overflow: hidden;
+}
+
+.hotlist, .latestlist {
+  width: 100%;
+  height: 100%;
+}
+
+.interests-scroll {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-right: 16rpx;
+  box-sizing: border-box;
+}

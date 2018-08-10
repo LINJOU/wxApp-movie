@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "skeleton": "/components/skeleton/skeleton",
+    "showMoreContent": "/components/showMoreContent/showMoreContent",
+    "star": "/components/star/star"
+  }
+}

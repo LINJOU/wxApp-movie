@@ -1,0 +1,4 @@
+<view class="showMoreContent">
+  <view class="showMoreContent-text">{{text}}</view>
+  <text class="showMoreContent-showMore" wx:if="{{hasMore}}" bindtap="showMoreContent">(展开)</text>
+</view>

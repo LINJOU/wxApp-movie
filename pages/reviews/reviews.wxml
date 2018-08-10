@@ -1,0 +1,8 @@
+<view class="reviews-page">
+  <view class="reviews-page-title">全部影评
+    <text class="reviews-page-total" wx:if="{{reviews.length > 0}}">({{reviewsTotal}})</text>
+  </view>
+  <scroll-view scroll-y class="reviews-page-list" scroll-y enable-back-to-top="true" bindscrolltolower="getMoreReviews">
+    <reviews reviewsList="{{reviews}}" loadingShow="{{hasMore && lowerLoadingShow}}"></reviews>
+  </scroll-view>
+</view>

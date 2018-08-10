@@ -1,0 +1,10 @@
+.skeleton {
+  width: 750rpx;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffffff;
+  position: absolute;
+  left:0;
+  top:0;
+  z-index:9998;
+}

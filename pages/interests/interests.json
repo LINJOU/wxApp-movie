@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "interests": "/components/interests/interests",
+    "switches": "/components/switches/switches"
+  }
+}

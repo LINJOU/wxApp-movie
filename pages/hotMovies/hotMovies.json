@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "switches": "/components/switches/switches",
+    "hotList": "/components/hotList/hotList",
+    "newList": "/components/newList/newList"
+  }
+}

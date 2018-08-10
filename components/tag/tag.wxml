@@ -1,0 +1,7 @@
+<view class="tag" scroll-x>
+  <text class="iconfont icon-sanjiaoxing-left"></text>
+  <scroll-view class='tag-list' scroll-x>
+    <view class="tag-item" wx:for="{{tagList}}" wx:key="index" data-tag-name="{{item.text}}" bindtap="selectItem">{{item.text}}</view>
+  </scroll-view>
+  <text class="iconfont icon-sanjiaoxing-right"></text>
+</view>

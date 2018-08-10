@@ -1,0 +1,87 @@
+@import "../../common/wxss/font.wxss";
+.user {
+  width: 750rpx;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 200rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  background: linear-gradient(#48BE58, #98D47E);
+}
+
+.userAvatar-content {
+  flex: 0 0 120rpx;
+  position: relative;
+  width: 120rpx;
+  margin-right: 24rpx;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: 120rpx 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userAvatar-content::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.userAvatar-item {
+ position: absolute;
+ top: 0;
+ left: 0; 
+}
+
+.userName {
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: #ffffff;
+}
+
+.switches-content {
+  width: 100%;
+  overflow: hidden;
+}
+
+.list-content {
+  width: 100%;
+  height: calc(100vh - 280rpx);
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+
+.list-item {
+  width: 100%;
+}
+
+.list-item-title {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #ccc;
+  border-bottom: 2rpx solid #ccc;
+  box-sizing: border-box;
+}
+
+.title-txt {
+  font-size: 32rpx;
+}
+
+.icon-icon-- {
+  padding: 0 12rpx;
+  font-size: 36rpx;
+}
+
+.list-item-content {
+  width: 100%;
+  height: calc(100vh - 200rpx - 80rpx - 80rpx);
+}

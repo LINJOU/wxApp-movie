@@ -1,0 +1,14 @@
+.cinema {
+  width: 750rpx;
+}
+
+.search-content {
+  width: 100%;
+}
+
+.list-content {
+  width: 100%;
+  height: calc(100vh - 160rpx);
+  padding: 20rpx 32rpx 0;
+  box-sizing: border-box;
+}

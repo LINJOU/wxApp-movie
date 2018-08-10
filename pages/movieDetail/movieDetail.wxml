@@ -1,0 +1,133 @@
+<skeleton skeletonRectLists="{{skeletonLists}}" wx:if="{{!showDetail}}"></skeleton>
+
+<scroll-view scroll-y enable-back-to-top="true" class="movie-detail">
+  <view class="top-content skeleton-rect">
+    <view class="top-avatar" style="background-image: url('{{detail.images}}')"></view>
+  </view>
+  <view class="detail-content">
+    <view class="detail-info">
+      <view class="detail-info-content">
+        <view class="detail-info-lf">
+          <view class="detail-info-title skeleton-rect">
+            <text>{{detail.title}}</text>
+            <text class="info-title-year" wx:if="{{detail.year}}">({{detail.year}})</text>
+          </view>
+          <view class="detail-info-font skeleton-rect">导演：
+            <text class="detail-info-txt">{{detail.directors}}</text>
+          </view>
+          <view class="detail-info-font skeleton-rect">编剧：
+            <text class="detail-info-txt">{{detail.writers}}</text>
+          </view>
+          <view class="detail-info-font skeleton-rect">主演：
+            <text class="detail-info-txt">{{detail.actors}}</text>
+          </view>
+          <view class="detail-info-font skeleton-rect">类型：
+            <text class="detail-info-txt">{{detail.genres}}</text>
+          </view>
+          <view class="detail-info-font skeleton-rect">制片国家 / 地区：
+            <text class="detail-info-txt">{{detail.countries}}</text>
+          </view>
+          <view class="detail-info-font skeleton-rect">语言：
+            <text class="detail-info-txt">{{detail.languages}}</text>
+          </view>
+          <view class="detail-info-font skeleton-rect">上映日期：
+            <text class="detail-info-txt">{{detail.pubdates}}</text>
+          </view>
+          <view class="detail-info-font skeleton-rect">片长：
+            <text class="detail-info-txt">{{detail.durations}}</text>
+          </view>
+          <view class="detail-info-font skeleton-rect">又名：
+            <text class="detail-info-txt">{{detail.aka}}</text>
+          </view>
+        </view>
+        <view class="detail-info-rt skeleton-rect">
+          <text class="detail-info-rt-txt">豆瓣评分</text>
+          <view class="detail-info-rating" wx:if="{{detail.rating && !detail.null_rating_reason}}">
+            <text class="detail-info-score">{{detail.rating.value}}</text>
+            <view class="detail-star-content">
+              <star size="{{starSize}}" score="{{detail.rating.value}}"></star>
+            </view>
+            <text class="detail-info-count">{{detail.rating.count}}人</text>
+          </view>
+          <view class="detail-info-noRating">
+            <view class="noRating" wx:if="{{detail.null_rating_reason}}">暂无评分</view>
+          </view>
+        </view>
+      </view>
+      <view class="watchStatus">
+        <view class="watchStatus-icon {{want === true ? 'watchStatus-icon-active' : ''}} skeleton-rect" bindtap="wantMovie">想看</view>
+        <view class="watchStatus-icon {{watched === true ? 'watchStatus-icon-active' : ''}} skeleton-rect" bindtap="watchedMovie">已看过</view>
+      </view> 
+    </view>
+    <view class="plot skeleton-rect">
+      <view class="plot-title">剧情简介</view>
+      <view class="plot-txt">
+        <showMoreContent content="{{detail.summary}}"></showMoreContent>
+      </view>
+    </view>
+    <view class="playUrl skeleton-rect" wx:if="{{detail.videos.length > 0}}">
+      <view class="playUrl-title">播放地址</view>
+      <view class="playUrl-content">
+        <view class="playUrl-item" wx:for="{{detail.videos}}" wx:key="{{index}}" data-sample-link="{{item.sample_link}}" bindtap="goToOut">播放地址 {{index + 1}}</view>
+      </view>
+    </view>
+    <view class="tags skeleton-rect">
+      <view class="tags-title">所属频道</view>
+      <text class="tag-item" wx:for="{{detail.tags}}" wx:key="{{index}}" bindtap="goToTag" data-tag-Name="{{item}}">{{item}}</text>
+    </view>
+    <view class="trailer skeleton-rect" wx:if="{{detail.trailers.length > 0}}">
+      <view class="trailer-title">预告片</view>
+      <scroll-view scroll-x class="trailer-list">
+        <view class="trailer-item" data-video-id="{{item.id}}" style="background-image: url('{{item.medium}}')" wx:for="{{detail.trailers}}" wx:key="{{index}}" bindtap="goToTrailer">
+          <image class="trailer-item-play" src="../../image/player/play.png"></image>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="member-content skeleton-rect" wx:if="{{credits.length > 0}}">
+      <view class="member-title">影人</view>
+      <scroll-view scroll-x class="member-list">
+        <view class="member-list-item" wx:for="{{credits}}" wx:key="{{index}}" data-member-id="{{item.id}}" bindtap="goToMember">
+          <view class="member-image" style="background-image: url('{{item.cover_url}}')"></view>
+          <view class="member-name">{{item.name}}</view>
+          <view class="member-identity">{{item.title}}</view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="photos-content skeleton-rect" wx:if="{{detail.photos.length > 0}}">
+      <view class="photos-title">剧照</view>
+      <scroll-view scroll-x class="photos-list">
+        <view class="photos-image" wx:for="{{detail.photos}}" wx:key="{{index}}" style="background-image: url('{{item.image}}')"></view>
+      </scroll-view>
+    </view>
+    <view class="interests-content skeleton-rect" wx:if="{{interests.length > 0}}">
+      <view class="interests-title">短评
+        <text class="interests-total">({{interestsTotal}})</text>
+      </view>
+      <interests interestsList="{{interests}}"></interests>
+      <view data-movie-id="{{detail.id}}" class="showMoreInterests" bindtap="goToInterests">查看全部短评</view>
+    </view>
+    <view class="forumTopics-content skeleton-rect" wx:if="{{forumTopics.length > 0}}">
+      <view class="forumTopics-title">讨论
+        <text class="forumTopics-total">({{forumTopicsTotal}})</text>
+      </view>
+      <forumTopics forumTopicsList="{{forumTopics}}"></forumTopics>
+      <view data-movie-id="{{detail.id}}" class="showMoreForumTopics" bindtap="goToForumTopics">查看全部讨论</view>
+    </view>
+    <view class="recommend-content skeleton-rect" wx:if="{{recommendList.length > 0}}">
+      <view class="recommend-title">喜欢{{detail.title}}的人也喜欢</view>
+      <scroll-view class="recommend-scroll" scroll-x>
+        <view class="recommend-item" data-movie-id="{{item.id}}" data-tag-name="{{item.info}}" wx:for="{{recommendList}}" wx:key="{{index}}" bindtap="selectItem">
+          <view class="recommend-item-image" style="background-image: url('{{item.imgUrl}}')"></view>
+          <view class="recommend-item-title">{{item.title}}</view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="reviews-content skeleton-rect" wx:if="{{reviews.length > 0}}">
+      <view class="reviewss-title">影评
+        <text class="reviews-total">({{reviewsTotal}})</text>
+      </view>
+      <reviews reviewsList="{{reviews}}"></reviews>
+      <view data-movie-id="{{detail.id}}" class="showMorereviews" bindtap="goToReviews">查看全部影评</view>
+    </view>
+  </view>
+</scroll-view>

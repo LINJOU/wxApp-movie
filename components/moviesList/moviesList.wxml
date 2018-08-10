@@ -1,0 +1,25 @@
+<scroll-view class='scroll' scroll-y enable-back-to-top="true" bindscrolltolower="scrolltolower">
+  <view data-movie-id="{{item.id}}" data-movie-tag="{{item.info}}" class="list-content" wx:for="{{moviesList}}" wx:key="{{index}}" bindtap="selectItem">
+    <view class="item-lf" style="background-image: url('{{item.imgUrl}}')"></view>
+    <view class="item-rt">
+      <view class="title">{{item.title}}</view>
+      <view class="item-rt-content">
+        <text wx:if="{{item.actors}}" class="actor line-ellipsis">主演：{{item.actors}}</text>
+        <text wx:if="{{item.directors}}" class="director line-ellipsis">导演：{{item.directors}}</text>
+        <view class="rating" wx:if="{{item.rating}}">
+          <view class="star-content">
+            <star size="{{starSize}}" score="{{item.rating.value}}"></star>
+          </view>
+          <text class="score">{{item.rating.value}}</text>
+        </view>
+        <view class="watched" wx:if="{{item.rating}}">
+          <text class="count">{{item.rating.count}}</text>
+          人看过
+        </view>
+        <view class="noRating" wx:if="{{item.null_rating_reason}}">暂无评分</view>
+      </view>
+    </view>
+    <view data-delete-id="{{item.id}}" wx:if="{{delete}}" class="iconfont icon-guanbi" catchtap="deleteItem"></view>
+  </view>
+  <lowerLoading wx:if="{{loadingShow}}"></lowerLoading>
+</scroll-view>

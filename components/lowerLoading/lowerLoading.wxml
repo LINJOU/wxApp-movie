@@ -1,0 +1,6 @@
+<view class="lower-loading">
+  <view class="lower-loading-content">
+    <image class="img" src="../../image/loading/loading.gif"></image>
+    <text class="loadTxt">{{loadTxt}}</text>
+  </view>
+</view>

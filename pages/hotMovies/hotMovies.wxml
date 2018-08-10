@@ -1,0 +1,13 @@
+<view class='hot-movies'>
+  <view class='switches-content'>
+    <switches switches="{{switchesName}}" bindgetIndex="selectIndex"></switches>
+  </view>
+  <view class='list-content'>
+    <view class="item-hotList" hidden="{{currentIndex !== 0}}">
+      <hotList></hotList>
+    </view>
+    <view class="item-newList" hidden="{{currentIndex !== 1}}">
+      <newList></newList>
+    </view>
+  </view>
+</view>

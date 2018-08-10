@@ -1,0 +1,10 @@
+<view class="forumTopics">
+  <view class="forumTopics-content" wx:for="{{forumTopicsList}}" wx:key="{{index}}">
+    <view class="forumTopics-txt">{{item.title}}</view>
+    <view class="forumTopics-count">
+      <text>{{item.comments_count}}</text>
+      回应
+    </view>
+  </view>
+  <lowerLoading wx:if="{{loadingShow}}"></lowerLoading>
+</view>

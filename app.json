@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/hotMovies/hotMovies",
+    "pages/cinema/cinema",
+    "pages/user/user",
+    "pages/movieDetail/movieDetail",
+    "pages/search/search",
+    "pages/tagDetail/tagDetail",
+    "pages/personDetail/personDetail",
+    "pages/reviews/reviews",
+    "pages/interests/interests",
+    "pages/forumTopics/forumTopics",
+    "pages/trailer/trailer",
+    "pages/outWeb/outWeb"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#05B512",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "豆瓣电影",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#05B512",
+    "list": [
+      {
+        "pagePath": "pages/hotMovies/hotMovies",
+        "text": "热门电影",
+        "iconPath": "image/tabBar/hotMovies.png",
+        "selectedIconPath": "image/tabBar/active-hotMovies.png"
+      },
+      {
+        "pagePath": "pages/cinema/cinema",
+        "text": "免费影院",
+        "iconPath": "image/tabBar/cinema.png",
+        "selectedIconPath": "image/tabBar/active-cinema.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "image/tabBar/user.png",
+        "selectedIconPath": "image/tabBar/active-user.png"    
+      }
+    ]
+  }
+}

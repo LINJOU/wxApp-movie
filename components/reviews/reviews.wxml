@@ -1,0 +1,14 @@
+<view class="reviews">
+  <view data-id="{{item.id}}" class="reviews-content" wx:for="{{reviewsList}}" wx:key="{{index}}">
+    <view class="reviews-title">{{item.title}}</view>
+    <view class="reviews-user">
+      <view class="reviews-user-name">{{item.author.name}}</view>
+      <view class="reviews-user-rating">
+        <star size="24" score="{{item.rating.value * 2}}"></star>
+      </view>
+    </view>
+    <view class="reviews-text">{{item.summary}}</view>
+    <view class="reviews-agree">{{item.useful_count}}  有用</view>
+  </view>
+  <lowerLoading wx:if="{{loadingShow}}"></lowerLoading>
+</view>

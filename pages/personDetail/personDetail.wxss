@@ -1,0 +1,160 @@
+.personDetail {
+  width: 750rpx;
+  height: 100vh;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.person-name {
+  width: 100%;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #111111;
+}
+
+.personName-cn {
+  padding-right: 12rpx;
+}
+
+.headline {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.person-avatar {
+  position: relative;
+  flex: 0 0 200rpx;
+  width: 200rpx;
+  margin: 8rpx 16rpx 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 200rpx 284rpx;
+}
+
+.person-avatar::before {
+  display: block;
+  content: "";
+  padding-top: 142%;
+}
+
+.person-Info {
+ flex: 1;
+ font-size: 32rpx;
+}
+
+.info-title {
+  color: #808080;
+}
+
+.info-txt {
+  color: #111111;
+}
+
+.collect-content {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.collect {
+  width: 200rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #808080;
+  border: 2rpx solid #808080;
+  border-radius: 12rpx;
+  box-sizing: border-box;
+}
+
+.collect-active {
+  color: #FAAF00;
+  border: 2rpx solid #FAAF00;
+}
+
+.person-summary, .person-photos, .person-works {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.person-summary-title, .person-photos-title, .person-works-title {
+  width: 100%;
+  height: 60rpx;
+  padding-bottom: 12rpx;
+  line-height: 60rpx;
+  font-size: 36rpx;
+  color: #000000;
+}
+
+.showMoreTxt {
+  width: 100%;
+}
+
+.person-photos-list, .person-works-list {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.person-photos-item {
+  display: inline-block;
+  width: 160rpx;
+  height: 240rpx;
+  margin-right: 12rpx;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.person-works-item {
+  display: inline-block;
+  width: 200rpx;
+  margin-right: 12rpx;
+  overflow: hidden;
+}
+
+.works-item-avatar {
+  width: 100%;
+  margin-bottom: 8rpx;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 200rpx 284rpx;
+}
+
+.works-item-avatar::before {
+  display: block;
+  content: "";
+  padding-top: 142%;
+}
+
+.works-item-title {
+  width: 100%;
+  margin-bottom: 8rpx;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+  color: #808080;
+}
+
+.works-item-rating {
+  width: 100%;
+  text-align: center;
+}
+
+.detail-info-noRating {
+  width: 100%;
+}
+
+.noRating {
+  width: 100%;
+  font-size: 28rpx;
+  color: #808080;
+  text-align: center;
+}

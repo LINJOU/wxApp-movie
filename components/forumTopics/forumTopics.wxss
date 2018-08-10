@@ -1,0 +1,26 @@
+.forumTopics {
+  width: 100%;
+}
+
+.forumTopics-content {
+  width: 100%;
+  padding: 28rpx 0;
+  border-bottom: 2rpx solid #ccc;
+  box-sizing: border-box;
+}
+
+.forumTopics-content:last-child {
+  border: none;
+}
+
+.forumTopics-txt {
+  padding-bottom: 8rpx;
+  line-height: 36rpx;
+  font-size: 32rpx;
+  color: #111111;
+}
+
+.forumTopics-count {
+  font-size: 28rpx;
+  color: #05B512;
+}

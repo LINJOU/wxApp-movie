@@ -1,0 +1,64 @@
+<skeleton skeletonRectLists="{{skeletonLists}}" wx:if="{{!showDetail}}"></skeleton>
+
+<scroll-view scroll-y class="personDetail">
+  <view class="person-name skeleton-rect">
+    <text class="personName-cn">{{detail.name}}</text>
+    <text class="personName-en">{{detail.name_en}}</text>
+  </view>
+  <view class="headline">
+    <view class="person-avatar skeleton-rect" style="background-image: url('{{detail.avatars.large}}')"></view>
+    <view class="person-Info">
+      <view class="info-title skeleton-rect" wx:if="{{detail.gender.length > 0}}">性别：
+        <text class="info-txt">{{detail.gender}}</text>
+      </view>
+      <view class="info-title skeleton-rect" wx:if="{{detail.constellation.length > 0}}">星座：
+        <text class="info-txt">{{detail.constellation}}</text>
+      </view>
+      <view class="info-title skeleton-rect" wx:if="{{detail.birthday.length > 0}}">出生日期：
+        <text class="info-txt">{{detail.birthday}}</text>
+      </view>
+      <view class="info-title skeleton-rect" wx:if="{{detail.born_place.length > 0}}">出生地：
+        <text class="info-txt">{{detail.born_place}}</text>
+      </view>
+      <view class="info-title skeleton-rect" wx:if="{{detail.professions.length > 0}}">职业：
+        <text class="info-txt">{{detail.professions}}</text>
+      </view>
+      <view class="info-title skeleton-rect" wx:if="{{detail.aka_en.length > 0}}">更多外文名：
+        <text class="info-txt">{{detail.aka_en}}</text>
+      </view>
+      <view class="info-title skeleton-rect" wx:if="{{detail.aka.length > 0}}">更多中文名：
+        <text class="info-txt">{{detail.aka}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="collect-content">
+    <view class="collect {{collect ? 'collect-active' : ''}} skeleton-rect" bindtap="collectItem">收藏</view>
+  </view>
+  <view class="person-summary skeleton-rect" wx:if="{{detail.summary.length > 0}}">
+    <view class="person-summary-title">影人简介</view>
+    <view class="showMoreTxt">
+      <showMoreContent content="{{detail.summary}}"></showMoreContent>
+    </view>
+  </view>
+  <view class="person-photos skeleton-rect"  wx:if="{{detail.photos.length > 0}}">
+    <view class="person-photos-title">影人图片</view>
+    <scroll-view class="person-photos-list" scroll-x>
+      <view class="person-photos-item" style="background-image: url('{{item.cover}}')" wx:for="{{detail.photos}}" wx:key="{{index}}"></view>
+    </scroll-view>
+  </view>
+  <view class="person-works skeleton-rect"  wx:if="{{detail.works.length > 0}}">
+    <view class="person-works-title">个人作品</view>
+    <scroll-view class="person-works-list" scroll-x>
+      <view data-movie-id="{{item.id}}" data-tag-name="{{item.info}}" class="person-works-item" wx:for="{{detail.works}}" wx:key="{{index}}" bindtap="selectItem">
+        <view class="works-item-avatar" style="background-image: url('{{item.images.large}}')"></view>
+        <view class="works-item-title">{{item.title}}</view>
+        <view class="works-item-rating">
+          <star  size="28" score="{{item.rating.average}}"></star>
+        </view>
+        <view class="detail-info-noRating">
+          <view class="noRating" wx:if="{{item.null_rating_reason}}">暂无评分</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</scroll-view>

@@ -1,0 +1,11 @@
+<view class="cinema">
+  <view class="search-content" catchtap="goToSearch">
+    <searchBox></searchBox>
+  </view>
+  <view class="tag-content">
+    <tag></tag>
+  </view>
+  <view class="list-content">
+    <moviesList moviesList="{{cinemalist}}" bindlower="getMorecinemaList" loadingShow="{{hasMore && lowerLoadingShow}}"></moviesList>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "skeleton": "/components/skeleton/skeleton",
+    "star": "/components/star/star",
+    "interests": "/components/interests/interests",
+    "forumTopics": "/components/forumTopics/forumTopics",
+    "reviews": "/components/reviews/reviews",
+    "showMoreContent": "/components/showMoreContent/showMoreContent"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "searchBox": "/components/searchBox/searchBox",
+    "tag": "/components/tag/tag",
+    "moviesList": "/components/moviesList/moviesList"
+  }
+}

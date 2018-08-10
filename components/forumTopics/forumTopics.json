@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "lowerLoading": "/components/lowerLoading/lowerLoading"
+  }
+}

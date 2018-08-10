@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "forumTopics": "/components/forumTopics/forumTopics"
+  }
+}

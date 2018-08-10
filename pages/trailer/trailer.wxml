@@ -1,0 +1,17 @@
+<scroll-view class="trailer-page">
+  <view class="trailer-title">{{currentTrailer.title}}</view>
+  <view class="trailer-content">
+    <video class="trailer-content-video" src="{{currentTrailer.resource_url}}"></video>
+  </view>
+  <view class="trailer-other-content">
+    <view class="trailer-other-title">预告片</view>
+    <scroll-view class="trailer-other-list" scroll-x>
+      <view class="trailer-other-item" data-video-id="{{item.id}}" wx:for="{{otherTrailers}}" wx:key="{{index}}" bindtap="goToTrailer">
+        <view class="trailer-other-image" style="background-image: url('{{item.medium}}')" >
+          <image class="trailer-item-play" src="../../image/player/play.png"></image>
+        </view>
+        <view class="trailer-other-title">{{item.title}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</scroll-view>

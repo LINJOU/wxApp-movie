@@ -1,0 +1,40 @@
+<view class="user">
+  <view class="top">
+    <view class="userAvatar-content" style="background-image: url('{{imgUrl}}')">
+      <open-data class="userAvatar-item" type="userAvatarUrl"></open-data>
+    </view>
+    <open-data class="userName" type="userNickName" lang="zh_CN"></open-data>
+  </view>
+  <view class="switches-content">
+    <switches switches="{{switchesName}}" bindgetIndex="selectIndex"></switches>
+  </view>
+  <view class="list-content">
+    <view class="list-item" hidden="{{currentIndex !== 0}}">
+      <view class="list-item-title" wx:if="{{props.wantStores.wants.length > 0}}">
+        <text class="title-txt">共有 {{props.wantStores.wants.length}} 部</text>
+        <text class="iconfont icon-icon--" bindtap="deleteWants"></text>
+      </view>
+      <view class="list-item-content">
+        <moviesList delete="true" moviesList="{{props.wantStores.wants}}" binddeleteOne="deleteWantsItem"></moviesList>
+      </view>
+    </view>
+    <view class="list-item" hidden="{{currentIndex !== 1}}">
+      <view class="list-item-title" wx:if="{{props.watchedStores.watcheds.length > 0}}">
+        <text class="title-txt">共有 {{props.watchedStores.watcheds.length}} 部</text>
+        <text class="iconfont icon-icon--" bindtap="deleteWatcheds"></text>
+      </view>
+      <view class="list-item-content">
+        <moviesList delete="true" moviesList="{{props.watchedStores.watcheds}}" binddeleteOne="deleteWatchedsItem"></moviesList>
+      </view>
+    </view>
+    <view class="list-item" hidden="{{currentIndex !== 2}}">
+      <view class="list-item-title" wx:if="{{props.collectStores.collects.length > 0}}">
+        <text class="title-txt">共有 {{props.collectStores.collects.length}} 人</text>
+        <text class="iconfont icon-icon--" bindtap="deleteCollects"></text>
+      </view>
+      <view class="list-item-content">
+        <actor actorList="{{props.collectStores.collects}}" binddeleteOne="deleteCollentsItem"></actor>
+      </view>
+    </view>
+  </view>
+</view>

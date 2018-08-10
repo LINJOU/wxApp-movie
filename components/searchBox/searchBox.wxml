@@ -1,0 +1,8 @@
+<view class="searchBox">
+  <text class="iconfont icon-sousuo"></text>
+  <view class="box">
+    <input class="input" type="text" confirm-type="search" placeholder="搜电影 / 演员 ..." placeholder-class="placeholder" bindinput="bindKeyInput" value="{{query}}" bindconfirm="bindKeyCode" focus="{{focus}}"/>
+    <text class="iconfont icon-cuowuguanbiquxiao-yuankuang" hidden="{{!query}}" bindtap="clear"></text>
+  </view>
+  <text class="iconfont icon-youjiantou" bindtap="bindKeyCode"></text>
+</view>

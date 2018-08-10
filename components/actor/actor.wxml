@@ -1,0 +1,7 @@
+<scroll-view class='actor-scroll' scroll-y enable-back-to-top="true">
+  <view data-actor-id="{{item.id}}" class="list-content" wx:for="{{actorList}}" wx:key="{{index}}" bindtap="selectItem">
+    <view class="image" style="background-image: url('{{item.imgUrl}}')"></view>
+    <view class="name">{{item.name}}</view>
+    <text data-delete-id="{{item.id}}" class="iconfont icon-guanbi" catchtap="deleteItem"></text>
+  </view>
+</scroll-view>

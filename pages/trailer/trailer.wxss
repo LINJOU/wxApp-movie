@@ -1,0 +1,75 @@
+.trailer-page{
+  width: 750rpx;
+  height: 100vh;
+  padding: 20rpx 32rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.trailer-title {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-bottom: 40rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #111111;
+}
+
+.trailer-content {
+  width: 100%;
+  height: 420rpx;
+  margin-bottom: 40rpx;
+  box-sizing: border-box;
+}
+
+.trailer-content-video  {
+  width: 100%;
+  height: 100%;
+}
+
+.trailer-other-content {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.trailer-other-title {
+  width: 100%;
+  height: 60rpx;
+  margin-bottom: 12rpx;
+  line-height: 60rpx;
+  font-size: 36rpx;
+  color: #000000;
+}
+
+.trailer-other-list {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.trailer-other-item {
+  display: inline-block;
+  margin: 0 16rpx 12rpx 0;
+  width: 426rpx;
+}
+
+.trailer-other-image {
+  width: 100%;
+  height: 240rpx;
+  background-repeat: no-repeat;
+  background-size: 426rpx 240rpx;
+  overflow: hidden;
+}
+
+.trailer-item-play {
+  height: 84rpx;
+  width: 84rpx;
+  margin: 78rpx 171rpx;
+}
+
+.trailer-other-title {
+  font-size: 28rpx;
+  color: #808080;
+  text-overflow: ellipsis;
+}

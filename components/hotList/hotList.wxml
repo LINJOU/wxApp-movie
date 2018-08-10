@@ -1,0 +1,3 @@
+<view class="hotList">
+  <moviesList moviesList="{{hotlist}}" bindlower="getMoreHotList" loadingShow="{{hothasMore && lowerLoadingShow}}"></moviesList>
+</view>

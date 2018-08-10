@@ -1,0 +1,84 @@
+@import "../../common/wxss/font.wxss";
+
+.interests {
+  width: 100%;
+}
+
+.interests-wrapper {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.interests-wrapper:last-child {
+  margin: 0;
+}
+
+.interests-user {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.interests-user-avatar {
+  width: 72rpx;
+  height: 72rpx;
+  margin: 4rpx 20rpx 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.interests-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.interests-user-name {
+  display: inline-block;
+  margin-right: 12rpx;
+  font-size: 32rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #111111;
+}
+
+.interests-user-rating {
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.interests-createTime {
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 24rpx;
+  color: #808080;
+}
+
+.interests-comment {
+  width: 100%;
+  padding-left: 90rpx;
+  box-sizing: border-box;
+}
+
+.interests-comment-txt {
+  padding: 0 32rpx 20rpx 0;
+  font-size: 32rpx;
+  color: #111111;
+  text-align:justify;
+  text-justify:inter-ideograph;
+}
+
+.interests-comment-agree {
+  display: flex;
+  color: #808080;
+}
+
+.icon-iconfontzhizuobiaozhun44 {
+  font-size: 40rpx;
+}
+
+.comment-agree-count {
+  font-size: 28rpx;
+  margin: 8rpx 0 0 12rpx;
+}

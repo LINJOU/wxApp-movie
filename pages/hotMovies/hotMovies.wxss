@@ -1,0 +1,17 @@
+.hot-movies {
+  width: 750rpx;
+}
+.switches-content {
+  width: 100%;
+  overflow: hidden;
+}
+.list-content {
+  width: 100%;
+  height: calc(100vh - 80rpx);
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.item-hotList, .item-newList {
+  width: 100%;
+  height: 100%;
+}

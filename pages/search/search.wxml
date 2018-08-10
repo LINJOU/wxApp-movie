@@ -1,0 +1,23 @@
+<view class="search">
+  <view class="search-content">
+    <searchBox id="searchBox" bindpostQuery="getQuery" focus="{{focus}}" outQuery="{{outQuery}}"></searchBox>
+  </view>
+  <view class="wrapper">
+    <view class="search-history" hidden="{{showResult || !props.searchHistoryStores.searchHistory.length > 0}}">
+      <view class="title">
+        <view class="txt">搜索历史</view>
+        <text class="iconfont icon-icon--" bindtap="clearHistory"></text>
+      </view>
+      <view class="searchHistory-content">
+        <view wx:for="{{props.searchHistoryStores.searchHistory}}" wx:key="index" class="searchHistory-item" bindtap="selectItem" data-item-txt="{{item}}">
+        {{item}}
+        </view>
+      </view>
+    </view>
+    <view class="search-result" wx:if="{{showResult}}">
+      <view class="iconfont icon-guanbi" bindtap="closed"></view>
+      <moviesList wx:if="{{!noResult}}" moviesList="{{searchResultList}}" bindlower="getMoreResult" loadingShow="{{hasMore && lowerLoadingShow}}"></moviesList>
+      <view wx:if="{{noResult}}" class="noResult">没有找到相关结果</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<view class="newList">
+  <moviesList moviesList="{{newlist}}" bindlower="getMoreNewList" loadingShow="{{newhasMore && lowerLoadingShow}}"></moviesList>
+</view>

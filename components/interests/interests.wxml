@@ -1,0 +1,24 @@
+<view class="interests">
+  <view class="interests-wrapper" wx:for="{{interests}}" wx:key="{{index}}">
+    <view class="interests-user">
+      <view class="interests-user-avatar" style="background-image: url('{{item.user.avatar}}')"></view>
+      <view class="interests-user-info">
+        <view class="interests-user-info-top">
+          <view class="interests-user-name">{{item.user.name}}</view>
+          <view class="interests-user-rating">
+            <star size="24" score="{{item.rating.value * 2}}"></star>
+          </view>
+        </view>
+        <view class="interests-createTime">{{item.create_time}}</view>
+      </view>
+    </view>
+    <view class="interests-comment">
+      <view class="interests-comment-txt">{{item.comment}}</view>
+      <view class="interests-comment-agree">
+        <text class="iconfont icon-iconfontzhizuobiaozhun44"></text>
+        <text class="comment-agree-count">{{item.vote_count}}</text>
+      </view>
+    </view>
+  </view>
+  <lowerLoading wx:if="{{loadingShow}}"></lowerLoading>
+</view>

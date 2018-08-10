@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "switches": "/components/switches/switches",
+    "moviesList": "/components/moviesList/moviesList",
+    "actor": "/components/actor/actor"
+  }
+}

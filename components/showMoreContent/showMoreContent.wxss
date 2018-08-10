@@ -1,0 +1,22 @@
+.showMoreContent {
+  position: relative;
+  width: 100%;
+}
+
+.showMoreContent-text {
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 38rpx;
+  font-size: 32rpx;
+  color: #808080;
+  text-align: justify;
+  text-overflow:ellipsis;
+}
+
+.showMoreContent-showMore {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 32rpx;
+  color: #05B512;
+}
